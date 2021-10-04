@@ -114,7 +114,13 @@ public class Personnel extends Users {
             System.out.println("q. Exit menu");
             System.out.println("===============================================");
             Scanner input = new Scanner(System.in);
-            choice = input.nextLine();
+            System.out.print("choice Food and Drink !: ");
+            int idFaD = input.nextInt();
+            System.out.print("Quality : ");
+            int numFAD = input.nextInt();
+            System.out.println("Press any key to continue, press q to exit ");
+            Scanner press = new Scanner(System.in);
+            choice = press.nextLine();
             TreeMap<String, Integer> usedFoodAndDrink = new TreeMap<>();
             long totalMoney = 0;
             if (choice == "q") {
@@ -141,7 +147,6 @@ public class Personnel extends Users {
                                         totalMoney += fad.getPriceFoodAndDrink() * num;
                                         str += fad.getNameFoodAndDrink() + ", quantity : " + num + fad.getPriceFoodAndDrink() * num + "\n";
                                     }
-
                                 }
                             }
                             System.out.println(str + formater.format(totalMoney));

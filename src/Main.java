@@ -56,6 +56,8 @@ public class Main {
             writer.append(",");
             writer.append("PRICE");
             writer.append(",");
+            writer.append("QUALITY");
+            writer.append(",");
             writer.append("STATUS");
             writer.append("\n");
 
@@ -67,6 +69,8 @@ public class Main {
                 writer.append(foodAndDrink.getOriginFoodAndDrink());
                 writer.append(",");
                 writer.append(String.valueOf(foodAndDrink.getPriceFoodAndDrink()));
+                writer.append(",");
+                writer.append(String.valueOf(foodAndDrink.getTotalQuantity()));
                 writer.append(",");
                 writer.append(foodAndDrink.getStatus());
                 writer.append("\n");
@@ -113,9 +117,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        FoodAndDrink fad1 = new FoodAndDrink(1,"coffee","drink",15000,"origin: make in Vietnam");
-        FoodAndDrink fad2 = new FoodAndDrink(2,"Aquafina","drink",10000,"origin: make in Vietnam");
-        FoodAndDrink fad3 = new FoodAndDrink(3,"cake","food",20000,"origin: make in Vietnam");
+        FoodAndDrink fad1 = new FoodAndDrink(1,"coffee","drink",15000,100,"origin: make in Vietnam");
+        FoodAndDrink fad2 = new FoodAndDrink(2,"Aquafina","drink",10000,100,"origin: make in Vietnam");
+        FoodAndDrink fad3 = new FoodAndDrink(3,"cake","food",20000,100,"origin: Bao Thanh Bakery");
         List<FoodAndDrink> listFaD = new ArrayList<>();
         listFaD.add(fad1);
         listFaD.add(fad2);
@@ -143,12 +147,6 @@ public class Main {
 
         Personnel p = new Personnel(userName, pass);
         p.menuWorksPersonnel();
-
-//        List<Users> = new ArrayList<>() ;
-//        Users
-//        accounts.add()
-////        accounts = readToFile(LINK_FILE_ACCOUNT);
-////        for(Users account : accounts)
 
 
     }

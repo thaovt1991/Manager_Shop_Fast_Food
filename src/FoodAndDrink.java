@@ -3,16 +3,30 @@ import java.io.Serializable;
 public class FoodAndDrink implements Serializable {
     private int idFoodAndDrink;
     private String nameFoodAndDrink;
-    private String typeFoodAndDrink ;
+    private String typeFoodAndDrink;
     private long priceFoodAndDrink;
+    private long totalQuantity;
     private String otherFoodAndDrink;
 
-    public FoodAndDrink(int idFoodAndDrink, String nameFoodAndDrink, String typeFoodAndDrink, long priceFoodAndDrink, String otherFoodAndDrink) {
+    public FoodAndDrink(int idFoodAndDrink, String nameFoodAndDrink, String typeFoodAndDrink, long priceFoodAndDrink,long totalQuantity, String otherFoodAndDrink) {
         this.idFoodAndDrink = idFoodAndDrink;
         this.nameFoodAndDrink = nameFoodAndDrink;
         this.typeFoodAndDrink = typeFoodAndDrink;
         this.priceFoodAndDrink = priceFoodAndDrink;
+        this.totalQuantity = totalQuantity;
         this.otherFoodAndDrink = otherFoodAndDrink;
+    }
+
+    public String getTypeFoodAndDrink() {
+        return typeFoodAndDrink;
+    }
+
+    public long getTotalQuantity() {
+        return totalQuantity;
+    }
+
+    public void setTotalQuantity(long totalQuantity) {
+        this.totalQuantity = totalQuantity;
     }
 
     public int getIdFoodAndDrink() {
