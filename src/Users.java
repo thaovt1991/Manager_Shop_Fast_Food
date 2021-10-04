@@ -3,12 +3,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Users {
+public class Users implements Serializable{
     private String usersName;
     private String password;
     private String part;
     private String fullName;
     private String personalInformation;
+
 
 
     public Users(String usersName, String password) {
@@ -51,6 +52,8 @@ public class Users {
         return personalInformation;
     }
 
+
+
     public void setPersonalInformation(String personalInformation) {
         this.personalInformation = personalInformation;
     }
@@ -69,7 +72,6 @@ public class Users {
         System.out.println("Wellcom! ");
     }
 
-    ;
 
 
     public void logOut() {
@@ -85,6 +87,7 @@ public class Users {
             choice = input.nextLine().charAt(0);
             switch (choice) {
                 case '1':
+                    System.out.println("Log Out success at "+ java.time.LocalDateTime.now() );
                     System.out.println("Thank you for using the software!");
                     System.exit(0);
                     break;

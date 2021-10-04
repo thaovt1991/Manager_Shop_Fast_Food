@@ -1,4 +1,6 @@
-public class FoodAndDrink {
+import java.io.Serializable;
+
+public class FoodAndDrink implements Serializable {
     private int idFoodAndDrink;
     private String nameFoodAndDrink;
     private String typeFoodAndDrink ;
